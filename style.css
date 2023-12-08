@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    border: 1px solid red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-calculator {
+    border: 1px solid blue;
+    width: 35%;
+    height: 60%;
+}
