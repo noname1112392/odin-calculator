@@ -16,4 +16,18 @@ body {
     border: 1px solid blue;
     width: 35%;
     height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-inside-calculator {
+    border: 1px dashed blue;
+    width: 95%;
+    height: 95%;
+    padding: 5%;
+}
+
+.body-top-display {
+
 }
