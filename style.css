@@ -46,6 +46,14 @@ body {
 
 .container {
     display: grid;
+    grid-template-columns: repeat(4, 22%);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+    "7 8 9 +"
+    "4 5 6 -"
+    "1 2 3 x"
+    "0 . C /"
+    "= = = ="
 }
 
 .buttons {
