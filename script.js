@@ -59,13 +59,61 @@ const topDisplay = document.querySelector('.top-display');
 let buttons = document.querySelectorAll('.buttons');
 
 // Attach a click event listener to each button
-buttons.forEach(function(button) {
-  button.addEventListener('click', function() {
-    let buttonId = this.id;
-    switch (buttonId) {
-        case 'zero':
-            topDisplay.textContent = '0';
-            return 0;
-    }
-  });
+buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        let buttonId = this.id;
+        switch (buttonId) {
+            case 'zero':
+                topDisplay.textContent = '0';
+                return 0;
+            case 'one':
+                topDisplay.textContent = '1';
+                return 1;
+            case 'two':
+                topDisplay.textContent = '2';
+                return 2;
+            case 'three':
+                topDisplay.textContent = '3';
+                return 3;
+            case 'four':
+                topDisplay.textContent = '4';
+                return 4;
+            case 'five':
+                topDisplay.textContent = '5';
+                return 5;
+            case 'six':
+                topDisplay.textContent = '6';
+                return 6;
+            case 'seven':
+                topDisplay.textContent = '7';
+                return 7;
+            case 'eight':
+                topDisplay.textContent = '8';
+                return 8;
+            case 'nine':
+                topDisplay.textContent = '9';
+                return 9;
+            case 'add':
+                topDisplay.textContent = '+';
+                return '+';
+            case 'substract':
+                topDisplay.textContent = '-';
+                return '-';
+            case 'multiply':
+                topDisplay.textContent = 'x';
+                return 'x';
+            case 'division':
+                topDisplay.textContent = '/';
+                return '/';
+            case 'equal':
+                topDisplay.textContent = '=';
+                return '=';
+            case 'delete':
+                topDisplay.textContent = 'del';
+                return 'del';
+            case 'decimal':
+                topDisplay.textContent = '.';
+                return '.';
+        }
+    });
 });
