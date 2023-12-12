@@ -105,6 +105,7 @@ buttons.forEach(function (button) {
                 valuesArr.push('/');
                 break;
             case 'equal':
+                performCal(valuesArr);
                 break;
             case 'delete':
                 topDisplay.textContent = 'del';
@@ -117,3 +118,7 @@ buttons.forEach(function (button) {
     });
 });
 
+function performCal(arr) {
+    let joinArr = arr.join('');
+    console.log(joinArr);
+}
