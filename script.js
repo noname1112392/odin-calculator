@@ -119,6 +119,20 @@ buttons.forEach(function (button) {
 });
 
 function performCal(arr) {
-    let joinArr = arr.join('');
-    console.log(joinArr);
+    let operatorRegex = /[+\-x/]/;
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (operatorRegex.test(arr[i])) {
+            index = i;
+        }
+    }
+    let operator = arr[index];
+    console.log(operator);
 }
+
+    // let operatorRegex = /[+\-x/]/;
+    // for (let i = 0; i < joinArr.length; i++) {
+    //     if (operatorRegex.test(joinArr[i])) {
+    //         operator += joinArr[i];
+    //     }
+    // }
