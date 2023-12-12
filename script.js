@@ -34,25 +34,10 @@ function operate(numbA, numbB, operator) {
     }
 }
 
-/*Create eventlistener for each buttons*/
-// const numbZero = document.getElementById('zero');
-// const numbOne = document.getElementById('one');
-// const numbTwo = document.getElementById('two');
-// const numbThree = document.getElementById('three');
-// const numbFour = document.getElementById('four');
-// const numbFive = document.getElementById('five');
-// const numbSix = document.getElementById('six');
-// const numbSeven = document.getElementById('seven');
-// const numbEight = document.getElementById('eight');
-// const numbNine = document.getElementById('nine');
-// const addBttn = document.getElementById('add');
-// const substractBttn = document.getElementById('substract');
-// const multBttn = document.getElementById('multiply');
-// const divisionBttn = document.getElementById('division');
-// const equalBttn = document.getElementById('equal');
-// const delBttn = document.getElementById('delete');
-// const decimalBttn = document.getElementById('decimal');
+/*Create variables*/
 const topDisplay = document.querySelector('.top-display');
+let valuesArr = [];
+const operationArr = new Array(3);
 
 //get value of each button:
 // Select all elements with class "buttons"
@@ -65,55 +50,70 @@ buttons.forEach(function (button) {
         switch (buttonId) {
             case 'zero':
                 topDisplay.textContent = '0';
-                return 0;
+                valuesArr.push(0);
+                break;
             case 'one':
                 topDisplay.textContent = '1';
-                return 1;
+                valuesArr.push(1);
+                break;
             case 'two':
                 topDisplay.textContent = '2';
-                return 2;
+                valuesArr.push(2);
+                break;
             case 'three':
                 topDisplay.textContent = '3';
-                return 3;
+                valuesArr.push(3);
+                break;
             case 'four':
                 topDisplay.textContent = '4';
-                return 4;
+                valuesArr.push(4);
+                break;
             case 'five':
                 topDisplay.textContent = '5';
-                return 5;
+                valuesArr.push(5);
+                break;
             case 'six':
                 topDisplay.textContent = '6';
-                return 6;
+                valuesArr.push(6);
+                break;
             case 'seven':
                 topDisplay.textContent = '7';
-                return 7;
+                valuesArr.push(7);
+                break;
             case 'eight':
                 topDisplay.textContent = '8';
-                return 8;
+                valuesArr.push(8);
+                break;
             case 'nine':
                 topDisplay.textContent = '9';
-                return 9;
+                valuesArr.push(9);
+                break;
             case 'add':
                 topDisplay.textContent = '+';
-                return '+';
+                valuesArr.push('+');
+                break;
             case 'substract':
                 topDisplay.textContent = '-';
-                return '-';
+                valuesArr.push('-');
+                break;
             case 'multiply':
                 topDisplay.textContent = 'x';
-                return 'x';
+                valuesArr.push('x');
+                break;
             case 'division':
                 topDisplay.textContent = '/';
-                return '/';
+                valuesArr.push('/');
+                break;
             case 'equal':
-                topDisplay.textContent = '=';
-                return '=';
+                break;
             case 'delete':
                 topDisplay.textContent = 'del';
                 return 'del';
             case 'decimal':
                 topDisplay.textContent = '.';
-                return '.';
+                valuesArr.push('.');
+                break;
         }
     });
 });
+
