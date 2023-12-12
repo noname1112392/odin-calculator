@@ -128,11 +128,17 @@ function performCal(arr) {
     }
     let operator = arr[index];
     console.log(operator);
-}
+    console.log(arr);
+    let joinArr = arr.join('');
+    console.log(joinArr);
+    let arrWithNumb = joinArr.split(operatorRegex);
+    console.log(arrWithNumb);
+    let firstNumb = parseInt(arrWithNumb[0]);
+    let secondNumb = parseInt(arrWithNumb[1]);
+    console.log(firstNumb);
+    console.log(secondNumb);
+    operate(firstNumb, secondNumb, operator);
 
-    // let operatorRegex = /[+\-x/]/;
-    // for (let i = 0; i < joinArr.length; i++) {
-    //     if (operatorRegex.test(joinArr[i])) {
-    //         operator += joinArr[i];
-    //     }
-    // }
+    arr.splice(0, arr.length);
+    console.log(arr);
+}
