@@ -52,7 +52,7 @@ function operate(numbA, numbB, operator) {
 // const equalBttn = document.getElementById('equal');
 // const delBttn = document.getElementById('delete');
 // const decimalBttn = document.getElementById('decimal');
-const topDisplay = document.querySelector('.body-top-display');
+const topDisplay = document.querySelector('.top-display');
 
 //get value of each button:
 // Select all elements with class "buttons"
