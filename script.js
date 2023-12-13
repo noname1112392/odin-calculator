@@ -46,43 +46,33 @@ buttons.forEach(function (button) {
         let buttonId = this.id;
         switch (buttonId) {
             case 'zero':
-                topDisplay.textContent = '0';
                 valuesArr.push(0);
                 break;
             case 'one':
-                topDisplay.textContent = '1';
                 valuesArr.push(1);
                 break;
             case 'two':
-                topDisplay.textContent = '2';
                 valuesArr.push(2);
                 break;
             case 'three':
-                topDisplay.textContent = '3';
                 valuesArr.push(3);
                 break;
             case 'four':
-                topDisplay.textContent = '4';
                 valuesArr.push(4);
                 break;
             case 'five':
-                topDisplay.textContent = '5';
                 valuesArr.push(5);
                 break;
             case 'six':
-                topDisplay.textContent = '6';
                 valuesArr.push(6);
                 break;
             case 'seven':
-                topDisplay.textContent = '7';
                 valuesArr.push(7);
                 break;
             case 'eight':
-                topDisplay.textContent = '8';
                 valuesArr.push(8);
                 break;
             case 'nine':
-                topDisplay.textContent = '9';
                 valuesArr.push(9);
                 break;
             case 'add':
@@ -105,13 +95,12 @@ buttons.forEach(function (button) {
                 performCal(valuesArr);
                 break;
             case 'delete':
-                topDisplay.textContent = 'del';
-                return 'del';
+                del(valuesArr);
             case 'decimal':
-                topDisplay.textContent = '.';
                 valuesArr.push('.');
                 break;
         }
+        topDisplay.textContent = valuesArr;
     });
 });
 
@@ -139,3 +128,12 @@ function performCal(arr) {
     console.log(`new ValuesArr ${valuesArr}`);
 }
 
+function del(arr) {
+    let joinArr = arr.splice(0, arr.length);
+    console.log(joinArr);
+    return joinArr;
+}
+
+function display(arr) {
+    
+}
