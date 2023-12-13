@@ -20,23 +20,20 @@ function multiply(a, b) {
 function operate(numbA, numbB, operator) {
     switch (operator) {
         case '+':
-            console.log(add(numbA, numbB));
-            break;
+            return add(numbA, numbB);
         case '-':
-            console.log(substract(numbA, numbB));
-            break;
+            return substract(numbA, numbB);
         case 'x':
-            console.log(multiply(numbA, numbB));
-            break;
+            return multiply(numbA, numbB);
         case '/':
-            console.log(division(numbA, numbB));
-            break;
+            return division(numbA, numbB);
     }
 }
 
 /*Create variables*/
 const topDisplay = document.querySelector('.top-display');
 let valuesArr = [];
+console.log(`before valueArr ${valuesArr}`);
 const operationArr = new Array(3);
 
 //get value of each button:
@@ -127,18 +124,18 @@ function performCal(arr) {
         }
     }
     let operator = arr[index];
-    console.log(operator);
-    console.log(arr);
+    console.log(`This operator is: ${operator}`);
+    console.log(`Array contains ${arr}`);
     let joinArr = arr.join('');
-    console.log(joinArr);
+    console.log(`this is now a string with: ${joinArr}`);
     let arrWithNumb = joinArr.split(operatorRegex);
-    console.log(arrWithNumb);
+    console.log(`This array only contains the numbs: ${arrWithNumb}`);
     let firstNumb = parseInt(arrWithNumb[0]);
     let secondNumb = parseInt(arrWithNumb[1]);
-    console.log(firstNumb);
-    console.log(secondNumb);
-    operate(firstNumb, secondNumb, operator);
-
-    arr.splice(0, arr.length);
-    console.log(arr);
+    console.log(`Get first numb from the arrWithNumb: ${firstNumb}`);
+    console.log(`Get second numb from the arrWithNumb: ${secondNumb}`);
+    let newNumb = operate(firstNumb, secondNumb, operator);
+    valuesArr.splice(0, valuesArr.length, newNumb);
+    console.log(`new ValuesArr ${valuesArr}`);
 }
+
