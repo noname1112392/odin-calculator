@@ -97,7 +97,6 @@ buttons.forEach(function (button) {
             case 'delete':
                 del(valuesArr);
             case 'decimal':
-                valuesArr.push('.');
                 break;
         }
         display(valuesArr);
@@ -128,9 +127,8 @@ function performCal(arr) {
 }
 
 function del(arr) {
-    let joinArr = arr.splice(0, arr.length);
-    console.log(joinArr);
-    return joinArr;
+    arr.length = 0;
+    console.log(arr);
 }
 
 function display(arr) {
