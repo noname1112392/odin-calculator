@@ -30,11 +30,13 @@ function operate(numbA, numbB, operator) {
     }
 }
 
-/*Create variables*/
+/*
+-Create variables
+-We create variable for topDisplay to display our numbers and operators
+-We create an empty array to store our inputs such as numbers and operators
+*/
 const topDisplay = document.querySelector('.top-display');
 let valuesArr = [];
-let isClick = false;
-
 
 //get value of each button:
 // Select all elements with class "buttons"
@@ -76,19 +78,15 @@ buttons.forEach(function (button) {
                 valuesArr.push(9);
                 break;
             case 'add':
-                topDisplay.textContent = '+';
                 valuesArr.push('+');
                 break;
             case 'substract':
-                topDisplay.textContent = '-';
                 valuesArr.push('-');
                 break;
             case 'multiply':
-                topDisplay.textContent = 'x';
                 valuesArr.push('x');
                 break;
             case 'division':
-                topDisplay.textContent = '/';
                 valuesArr.push('/');
                 break;
             case 'equal':
