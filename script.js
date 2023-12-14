@@ -1,4 +1,4 @@
-//Create math operators:
+//Create math operation functions:
 function add(a, b) {
     return a + b;
 }
