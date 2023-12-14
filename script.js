@@ -33,8 +33,8 @@ function operate(numbA, numbB, operator) {
 /*Create variables*/
 const topDisplay = document.querySelector('.top-display');
 let valuesArr = [];
-console.log(`before valueArr ${valuesArr}`);
-const operationArr = new Array(3);
+let isClick = false;
+
 
 //get value of each button:
 // Select all elements with class "buttons"
@@ -100,32 +100,31 @@ buttons.forEach(function (button) {
                 valuesArr.push('.');
                 break;
         }
-        topDisplay.textContent = valuesArr;
+        display(valuesArr);
     });
 });
 
 function performCal(arr) {
+    //create variable to store +,-,x,/
     let operatorRegex = /[+\-x/]/;
     let index = 0;
+    //This code is to look for index of operators
     for (let i = 0; i < arr.length; i++) {
         if (operatorRegex.test(arr[i])) {
             index = i;
         }
     }
+    //Get operator
     let operator = arr[index];
-    console.log(`This operator is: ${operator}`);
-    console.log(`Array contains ${arr}`);
+    //Make a string out of the arr
     let joinArr = arr.join('');
-    console.log(`this is now a string with: ${joinArr}`);
+    //Create a new arr to store only numbers
     let arrWithNumb = joinArr.split(operatorRegex);
-    console.log(`This array only contains the numbs: ${arrWithNumb}`);
+    //Get first number and second number from the arrWithNumb
     let firstNumb = parseInt(arrWithNumb[0]);
     let secondNumb = parseInt(arrWithNumb[1]);
-    console.log(`Get first numb from the arrWithNumb: ${firstNumb}`);
-    console.log(`Get second numb from the arrWithNumb: ${secondNumb}`);
     let newNumb = operate(firstNumb, secondNumb, operator);
     valuesArr.splice(0, valuesArr.length, newNumb);
-    console.log(`new ValuesArr ${valuesArr}`);
 }
 
 function del(arr) {
@@ -135,5 +134,8 @@ function del(arr) {
 }
 
 function display(arr) {
-    
+    //Make a string out of the arr
+    let joinArr = arr.join(' ');
+    topDisplay.innerHTML = joinArr;
 }
+
