@@ -101,6 +101,10 @@ buttons.forEach(function (button) {
     });
 });
 
+//This function will be called when the equal button is clicked
+//It performs by getting the array and look for operators.
+//It will separate the numbers out then will add those 2 parts numbers into another array
+//It will then call the Operate function by plugging in 2 numbers and the operators
 function performCal(arr) {
     //create variable to store +,-,x,/
     let operatorRegex = /[+\-x/]/;
@@ -124,11 +128,13 @@ function performCal(arr) {
     valuesArr.splice(0, valuesArr.length, newNumb);
 }
 
+//A delete function that will be called when the delete button is clicked
 function del(arr) {
     arr.length = 0;
     console.log(arr);
 }
 
+//This Display function will be called and display the numbers and operators inside the arrays
 function display(arr) {
     //Make a string out of the arr
     let joinArr = arr.join(' ');
